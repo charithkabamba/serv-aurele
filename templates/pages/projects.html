@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+    <!-- header start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px">
+            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Projets</h4>
+            <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="{% url 'index' %}">Accueil</a></li>
+                <li class="breadcrumb-item active text-primary">Projets</li>
+            </ol>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header text-center mb-5">
+                <h2>Nos réalisations</h2>
+                <p>Découvrez une sélection de projets menés par notre équipe, illustrant notre savoir-faire et notre
+                    engagement.</p>
+            </div>
+
+            <div class="row gy-4">
+                {% for project in projects %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.title }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="{% url 'project_detail' project.id %}" class="btn btn-primary">Voir Plus</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section><!-- End Projects Section -->
+
+</main>
+{% endblock content %}

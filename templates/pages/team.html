@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <div class="page-title">
+        <div class="title-wrapper">
+            <h1>Notre Équipe</h1>
+            <p>
+                Nous sommes une équipe engagé dans la recherche et le développement de solutions innovantes pour
+                l'industrie
+                du numérique.
+            </p>
+        </div>
+    </div>
+
+    <section id="team" class="team section">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Ingénieurs Opérqteurs</h2>
+                <p>
+                    Nous somposons d'une équipe de 10 personnes, dont 4 ingénieurs et 6 opérateurs. Nous sommes tous
+                    passionnés par la technologie et la résolution de problèmes complexes.
+
+                </p>
+            </div>
+
+            <div class="row gy-4">
+                {% for team in teams %}
+                <div class="col-lg-4">
+                    <div class="member-card">
+                        <img src="{{ team.image.url }}" alt="{{ team.name }}" class="img-fluid rounded-rectangle">
+
+                        <h4>{{ team.name }}</h4>
+                        <span class="role">{{ team.role }}</span>
+                        <p>{{ team.skills }}</p>
+                        <div class="member-skills">
+                            <span>{{ team.team_module }}</span> <span>{{ team.team_module1 }}</span>
+                            <span>{{team.team_module2 }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="team-cta text-center mt-5">
+                <h3>Want to join the team?</h3>
+                <p>We're hiring engineers and designers. Send us your resume and a short note about what you'd like to
+                    build.</p>
+                <a href="{% url 'messages' %}" class="btn btn-primary">Nous Contacter</a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- personal pack -->
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="breadcrumbs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active current">Pack Personnel</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="title-wrapper">
+            <h1>Pack Personnel</h1>
+            <p>
+                Discover our Pack Personnel, designed to provide students with the support and resources
+                they need to succeed personally and professionally.
+            </p>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Pack Personnel Section -->
+    <section id="personal-pack" class="personal-pack section">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Pack Personnel</h2>
+                <p>Our Pack Personnel offers a variety of services and resources to support your personal development.
+                </p>
+            </div>
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pack-box">
+                        <i class="bi bi-person-circle"></i>
+                        <h3>Counseling Services</h3>
+                        <p>Get professional counseling to help you navigate personal challenges and develop healthy
+                            coping strategies.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pack-box">
+                        <i class="bi bi-heart-fill"></i>
+                        <h3>Mental Health Support</h3>
+                        <p>Access mental health resources and support programs designed to promote well-being and
+                            resilience.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pack-box">
+                        <i class="bi bi-calendar-check"></i>
+                        <h3>Life Skills Training</h3>
+                        <p>Develop essential life skills such as time management, financial literacy, and communication
+                            through our training programs.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- End Pack Personnel Section -->
+
+</main><!-- End personal pack -->
+{% endblock %}

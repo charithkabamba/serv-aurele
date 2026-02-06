@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <div class="page-title">
+        <div class="title-wrapper">
+            <h1>Contact</h1>
+            <p>Envoyez-nous un message et nous vous répondrons dans les 24 heures.</p>
+        </div>
+    </div>
+
+    <section id="contact-page" class="contact section">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="contact-details">
+                        <h3>Get in touch</h3>
+                        <p>
+                            Nous sommes impatients de vous entendre! Que vous ayez une question, un projet à discuter ou
+                            simplement envie de dire bonjour, n'hésitez pas à nous contacter. Notre équipe est là pour
+                            vous aider et répondre à toutes vos demandes.
+                        </p>
+
+                        <ul class="list-unstyled contact-info">
+                            <li><i class="bi bi-telephone-fill"></i> <strong>Téléphone:</strong><a
+                                    href="tel:++243977143354"></a>+243977143354</li>
+
+                            <li><i class="bi bi-envelope-fill"></i> <strong><a
+                                        href="mailto:ledouxkabamba135@gmail.com"></a>Email:</strong>Aurele-service</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> <strong>Adresse:</strong> 12 kolwezi</li>
+                        </ul>
+
+                        <div class="office-hours mt-3">
+                            <h5>Heures de Bureau</h5>
+                            <p>Lundi — Vendredi: 9:00 — 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        {% if messages %}
+                        <div class="mb-3">
+                            {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <form method="post" action="{% url 'messages' %}" novalidate>
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="id_name" class="form-label">Name</label>
+                                    <input type="text" name="name" id="id_name" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="id_email" class="form-label">Email</label>
+                                    <input type="email" name="email" id="id_email" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="id_subject" class="form-label">Subject</label>
+                                    <input type="text" name="subject" id="id_subject" class="form-control">
+                                </div>
+                                <div class="col-12">
+                                    <label for="id_message" class="form-label">Message</label>
+                                    <textarea name="message" id="id_message" rows="6" class="form-control"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn btn-primary">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}

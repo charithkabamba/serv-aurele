@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+
+  <!-- Developer Hero -->
+  <section class="dev-hero section text-center" data-aos="fade-up">
+    <div class="container">
+      {% for portfolio in portfolios %}
+      <div class="row align-items-center">
+
+        <div class="col-lg-4">
+          <div class="avatar">
+            <img src="{{ portfolio.image.url }}" alt="Developer" class="img-fluid rounded-circle">
+          </div>
+        </div>
+        <div class="col-lg-8 text-start">
+          <h1>{{ portfolio.name }}</h1>
+          <p class="lead">{{ portfolio.title }}</p>
+          <p>{{ portfolio.description }}</p>
+          <div class="hero-links mt-3">
+            <a href="{% url 'envois' %}" class="btn btn-primary me-2">Nous contacter</a>
+            <a href="#" class="btn btn-outline">Voir Projets</a>
+            <a href="#" class="btn btn-link">Télécharger CV</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Portfolio</h2>
+        <p>Voici quelques-uns de mes projets récents.</p>
+      </div>
+      <div class="row gy-4 portfolio-container">
+      </div>
+    </div>
+
+  </section>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header text-center mb-5">
+        <h2>Nos réalisations</h2>
+        <p>Découvrez une sélection de projets menés par notre équipe, illustrant notre savoir-faire et notre
+          engagement.</p>
+      </div>
+
+      <div class="row gy-4">
+        {% for project in projects %}
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-sm">
+            <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <p class="card-text">{{ project.description }}</p>
+              <a href="{% url 'project_detail' project.id %}" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section><!-- End Projects Section -->
+
+  <!-- À Propos & Skills -->
+  <section id="about-dev" class="about section">
+    <div class="container" data-aos="fade-up">
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <h2>À Propos</h2>
+          <p>Passionate developer with over 8 years of experience in web development, application architecture and
+            technical leadership. I support startups and established companies across the entire product lifecycle.</p>
+
+          <ul class="features-list">
+            <li><i class="bi bi-check-circle-fill"></i> Backend architecture & secure APIs</li>
+            <li><i class="bi bi-check-circle-fill"></i> High‑performance user interfaces</li>
+            <li><i class="bi bi-check-circle-fill"></i> DevOps & Cloud deployments (AWS / GCP)</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Technical Skills</h3>
+          <div class="row g-2">
+            <div class="col-6">
+              <ul class="skill-list">
+                <li>Python / Django</li>
+                <li>JavaScript / React</li>
+                <li>TypeScript</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="skill-list">
+                <li>PostgreSQL / Redis</li>
+                <li>Docker / Kubernetes</li>
+                <li>CI/CD & Testing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-bars mt-3">
+            <div class="skill">
+              <div class="skill-name">Django</div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width:92%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">React</div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width:85%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill-name">Cloud & DevOps</div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width:78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="portfolio section">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Recent Projects</h2>
+        <p>Examples of work led by Alexandre and his team.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="portfolio-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-7.webp' %}" class="img-fluid" alt="Digital Innovation">
+            <div class="portfolio-body">
+              <h4>Platforme d'Innovation Digitale</h4>
+              <p>Plateforme de gestion de l'innovation interne et de tableaux de bord en temps réel.</p>
+              <div class="tech"><span>React</span> <span>Node.js</span> <span>AWS</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-8.webp' %}" class="img-fluid" alt="Productivity App">
+            <div class="portfolio-body">
+              <h4>Application de Productivité</h4>
+              <p>Application mobile multiplateforme pour améliorer la productivité personnelle.</p>
+              <div class="tech"><span>Flutter</span> <span>Firebase</span> <span>AI</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-11.webp' %}" class="img-fluid" alt="E-commerce">
+            <div class="portfolio-body">
+              <h4>Plateforme E‑commerce</h4>
+              <p>Plateforme e‑commerce à fort trafic avec intégration de paiement et API partenaires.</p>
+              <div class="tech"><span>Shopify</span> <span>React</span> <span>API</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Équipe -->
+  <section id="team" class="team section">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>My Équipe</h2>
+        <p>Multidisciplinary team committed to project success.</p>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="{% static 'assets/img/person/person-f-8.webp' %}" alt="Member" class="img-fluid rounded-circle">
+            <h5>Marie Lefèvre</h5>
+            <span>Designer de produit</span>
+            <p>UI/UX designer — rapid prototyping & user research.</p>
+            <div class="socials">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="{% static 'assets/img/person/person-m-11.webp' %}" alt="Member" class="img-fluid rounded-circle">
+            <h5>Samuel N'Diaye</h5>
+            <span>Backend Engineer</span>
+            <p>Django specialist & microservices architect.</p>
+            <div class="socials">
+              <a href="#"><i class="bi bi-github"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="{% static 'assets/img/person/person-f-12.webp' %}" alt="Member" class="img-fluid rounded-circle">
+            <h5>Leïla Haddad</h5>
+            <span>Ingénieur Frontend</span>
+            <p>React & accessibility. Performance optimization.</p>
+            <div class="socials">
+              <a href="#"><i class="bi bi-github"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <img src="{% static 'assets/img/person/person-m-10.webp' %}" alt="Member" class="img-fluid rounded-circle">
+            <h5>Oumar Traoré</h5>
+            <span>DevOps</span>
+            <p>CI/CD, infrastructure as code and monitoring.</p>
+            <div class="socials">
+              <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="contact-cta section text-center" data-aos="fade-up">
+    <div class="container">
+      <h2>Parlons de votre projet</h2>
+      <p>Disponible pour de nouveaux projets freelance ou des postes à temps plein. Parlons-en!</p>
+      <a href="{% url 'envois' %}" class="btn btn-primary">Envoyez un message</a>
+    </div>
+  </section>
+
+</main>
+{% endblock content %}

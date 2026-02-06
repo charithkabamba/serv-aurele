@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <div class="breadcrumbs">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+          <li class="breadcrumb-item"><a href="#">Category</a></li>
+          <li class="breadcrumb-item active current">Service Details</li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="title-wrapper">
+      <h1>Service Details</h1>
+      <p>
+        Explore our comprehensive digital marketing services designed to elevate your brand's online presence
+        and drive measurable results.
+      </p>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Service Details Section (Technical Services) -->
+  <section id="service-details" class="service-details section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <!-- Service Overview -->
+        <div class="col-lg-8">
+          <div class="service-content">
+            <h2>Platform Engineering & DevOps Services</h2>
+            <p class="lead">We design, build and operate reliable, secure and scalable platforms to run modern
+              applications and data systems.</p>
+
+            <div class="service-image" data-aos="fade-up" data-aos-delay="200">
+              <img src="{% static 'assets/img/services/services-3.webp' %}" alt="Platform Engineering"
+                class="img-fluid rounded">
+            </div>
+
+            <p>
+              Our platform engineering practice focuses on infrastructure automation, CI/CD pipelines, container
+              orchestration and observability. We partner with product teams to enable fast, safe delivery through IaC,
+              testing, and production-grade monitoring.
+            </p>
+
+            <!-- Service Features (Technical) -->
+            <div class="service-features" data-aos="fade-up" data-aos-delay="300">
+              <h4>Core Capabilities</h4>
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <div class="feature-item">
+                    <i class="bi bi-hdd-network flex-shrink-0"></i>
+                    <div>
+                      <h5>Infrastructure as Code (IaC)</h5>
+                      <p>Automated, versioned infrastructure using Terraform, Pulumi or CloudFormation.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item">
+                    <i class="bi bi-box-seam flex-shrink-0"></i>
+                    <div>
+                      <h5>Containerization & Orchestration</h5>
+                      <p>Docker images, Kubernetes (EKS/GKE/AKS) and policy-driven deployments.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item">
+                    <i class="bi bi-github flex-shrink-0"></i>
+                    <div>
+                      <h5>CI/CD Pipelines</h5>
+                      <p>Robust pipelines with automated testing, canary releases and rollbacks (GitHub Actions, GitLab
+                        CI).</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item">
+                    <i class="bi bi-bar-chart-line flex-shrink-0"></i>
+                    <div>
+                      <h5>Observability & Monitoring</h5>
+                      <p>Logging, metrics and tracing with Prometheus, Grafana, ELK and OpenTelemetry.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item">
+                    <i class="bi bi-shield-lock flex-shrink-0"></i>
+                    <div>
+                      <h5>Security & Compliance</h5>
+                      <p>Automated security scans, secrets management and compliance-ready configurations.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item">
+                    <i class="bi bi-gear-wide-connected flex-shrink-0"></i>
+                    <div>
+                      <h5>Data & ML Infrastructure</h5>
+                      <p>Data pipelines, model deployment and MLOps (Airflow, Spark, Kubeflow).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- services items -->
+
+
+            <!-- endservices items -->
+
+
+            <!-- Process Steps -->
+            <div class="service-process" data-aos="fade-up" data-aos-delay="400">
+              <h4>How We Work</h4>
+              <div class="process-steps">
+                <div class="step-item">
+                  <div class="step-number">01</div>
+                  <div class="step-content">
+                    <h5>Assess & Architect</h5>
+                    <p>We evaluate your existing systems, define target architecture, cost and reliability goals.</p>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">02</div>
+                  <div class="step-content">
+                    <h5>Implement & Automate</h5>
+                    <p>Build IaC, pipelines, and platform services to enable repeatable deployments and testing.</p>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">03</div>
+                  <div class="step-content">
+                    <h5>Operate & Observe</h5>
+                    <p>Set up observability, alerts and SLOs so teams can operate reliably and respond to incidents.</p>
+                  </div>
+                </div>
+                <div class="step-item">
+                  <div class="step-number">04</div>
+                  <div class="step-content">
+                    <h5>Optimize & Scale</h5>
+                    <p>Ongoing optimization for cost, performance and security; capacity planning for scale.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div><!-- End Service Content -->
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="sidebar" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Service Quick Facts -->
+            <div class="service-info">
+              <h4>Service Snapshot</h4>
+              <ul class="service-facts">
+                <li>
+                  <span class="fact-label">Engagement:</span>
+                  <span class="fact-value">POC → Pilot → Production</span>
+                </li>
+                <li>
+                  <span class="fact-label">Typical Duration:</span>
+                  <span class="fact-value">4-12 weeks (POC) / Ongoing Support</span>
+                </li>
+                <li>
+                  <span class="fact-label">Équipe Size:</span>
+                  <span class="fact-value">2-8 Engineers</span>
+                </li>
+                <li>
+                  <span class="fact-label">SLA:</span>
+                  <span class="fact-value">Business-hours + On-call</span>
+                </li>
+                <li>
+                  <span class="fact-label">Cloud:</span>
+                  <span class="fact-value">AWS / GCP / Azure</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="service-testimonial">
+              <div class="testimonial-content">
+                <p>"The platform delivered significant velocity improvements — automated deployments and reliable
+                  monitoring reduced incidents by 70%."</p>
+                <div class="testimonial-author">
+                  <img src="{% static 'assets/img/person/person-f-3.webp' %}" alt="Sarah Johnson" class="author-image">
+                  <div class="author-info">
+                    <h5>Sarah Johnson</h5>
+                    <span>CTO, FinTech Co.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="inquiry-form">
+              <h4>Request a Technical Proposal</h4>
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-group mb-3">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+                </div>
+                <div class="form-group mb-3">
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group mb-3">
+                  <input type="text" name="company" class="form-control" id="company" placeholder="Company / Project">
+                </div>
+                <input type="hidden" name="subject" value="Platform Engineering Proposal Request">
+                <div class="form-group mb-4">
+                  <textarea class="form-control" name="message" rows="5"
+                    placeholder="Briefly describe your current stack and goals..." required></textarea>
+                </div>
+                <div class="loading">Chargement</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your request has been received. We'll contact you shortly.</div>
+                <button type="submit" class="btn-submit w-100">Request Proposal</button>
+              </form>
+            </div>
+
+          </div>
+        </div><!-- End Sidebar -->
+        <!-- serviceItems -->
+
+        <!-- end service items -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Service Details Section -->
+  <!-- section nos service -->
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <h2>Nos Services</h2>
+            <p>Explorez nos services pour accroître votre productivité et votre efficacité.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {% for service in services %}
+        <div class="col-lg-4 col-md-6 mb-4">
+          <!-- afficher image -->
+          <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+            <!-- afficher image -->
+            <div class="service-img">
+              <img src="{{ service.image.url }}" alt="{{ service.title }}" class="img-fluid rounded">
+            </div>
+            <!-- afficher image -->
+            <div class="service-content">
+              <h4>{{ service.title }}</h4>
+              <p>{{ service.descripti }}</p>
+              <a href="#" class="readmore">En savoir plus <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- end section nos service -->
+
+</main>
+{% endblock content %}

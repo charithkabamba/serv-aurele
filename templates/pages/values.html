@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+    <!-- Valeurs Page Title -->
+    <div class="page-title">
+        <div class="breadcrumbs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active current">Our Valeurs</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="title-wrapper">
+            <h1>Our Valeurs</h1>
+            <p>Discover the core principles that drive Aurele-service and shape our commitment to excellence.</p>
+        </div>
+    </div><!-- End Valeurs Page Title -->
+
+
+    <!-- Valeurs Section -->
+    <section id="values" class="values section">
+
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Valeurs</h2>
+                <p>At Aurele-service, our core values define who we are and guide our actions. We are committed to:</p>
+            </div>
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-box">
+                        <i class="bi bi-shield-check"></i>
+                        <h3>Intégrité</h3>
+                        <p>We uphold the highest standards of integrity in all our actions, ensuring honesty and
+                            transparency
+                            in our dealings.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-box">
+                        <i class="bi bi-award"></i>
+                        <h3>Excellence</h3>
+                        <p>We strive for excellence in everything we do, delivering quality services that exceed our
+                            clients'
+                            expectations.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-box">
+                        <i class="bi bi-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>We embrace innovation, continuously seeking new ideas and approaches to improve our services
+                            and solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-box">
+                        <i class="bi bi-people"></i>
+                        <h3>Respect</h3>
+                        <p>We value and respect our clients, partners, and team members, fostering a collaborative and
+                            inclusive environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Valeurs Section -->
+</main>
+{% endblock content %}

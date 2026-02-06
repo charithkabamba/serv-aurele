@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="breadcrumbs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active current">Our Packs</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="title-wrapper">
+            <h1>Packs</h1>
+            <p>
+                Discover our Student Full Pack, designed to provide students with the support and resources
+                they need to succeed academically and personally.
+            </p>
+        </div>
+    </div><!-- End Page Title -->
+
+
+
+
+
+{% endblock content %}

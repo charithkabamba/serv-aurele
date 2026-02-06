@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- professional pack -->
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="breadcrumbs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active current">Pack Professionnel</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="title-wrapper">
+            <h1>Pack Professionnel</h1>
+            <p>
+                Explore our Pack Professionnel, tailored to provide individuals with the skills and resources needed
+                to excel in their careers and professional development.
+            </p>
+        </div>
+    </div><!-- End Page Title -->
+    <!-- Pack Professionnel Section -->
+    <section id="professional-pack" class="professional-pack section">
+
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Pack Professionnel</h2>
+                <p>Our Pack Professionnel offers a variety of services and resources designed to support your career
+                    growth.
+                </p>
+            </div>
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pack-box">
+                        <i class="bi bi-person-badge-fill"></i>
+                        <h3>Career Coaching</h3>
+                        <p>Receive personalized career coaching to help you identify your strengths, set goals, and
+                            navigate your professional path.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pack-box">
+                        <i class="bi bi-card-checklist"></i>
+                        <h3>Skill Development Workshops</h3>
+                        <p>Participate in workshops focused on enhancing key professional skills such as leadership,
+                            communication, and project management.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pack-box">
+                        <i class="bi bi-people-fill"></i>
+                        <h3>Professional Networking</h3>
+                        <p>Connect with industry professionals and expand your network through exclusive events and
+                            online communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Pack Professionnel Section -->
+</main><!-- End #main -->
+{% endblock %}

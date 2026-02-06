@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- contact page -->
+<main class="main">
+  <!-- header start -->
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Nous vous aidons à atteindre vos objectifs avec nos services professionnels</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-center">
+        <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+          <div class="contact-form-card">
+            <div class="form-header">
+              <div class="header-icon">
+                <i class="bi bi-chat-dots-fill"></i>
+              </div>
+              <h3>Commençons une Conversation</h3>
+              <p>
+                Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.
+              </p>
+            </div>
+
+            <form action="{% url 'messages' %}" method="post" class="">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="email" class="form-control" name="email" placeholder="Email Adresse" required="">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <input type="text" class="form-control" name="subject" placeholder="De quoi s'agit-il?" required="">
+              </div>
+
+              <div class="mb-4">
+                <textarea class="form-control" name="message" rows="4" placeholder="Dites-nous plus sur votre projet..."
+                  required=""></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn btn btn-primary w-100">
+                <span>Envoyer le message</span>
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+          <div class="contact-info-area">
+            <div class="info-header">
+              <h3>Prêt à transformer vos idées?</h3>
+              <p>
+                Contactez-nous dès maintenant pour commencer votre projet et bénéficier de nos services professionnels.
+              </p>
+            </div>
+
+            <div class="contact-methods">
+              <div class="method-card" data-aos="zoom-in" data-aos-delay="250">
+                <div class="card-icon">
+                  <i class="bi bi-envelope-at"></i>
+                </div>
+                <div class="card-content">
+                  <h5>Nous envoyer un email</h5>
+                  <a href="mailto:ledouxkabamba135@gmail.com">Aurele-service</a>
+                  <span class="response-time">Réponse en 2-4 heures</span>
+                </div>
+              </div>
+
+              <div class="method-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="card-content">
+                  <h5>Nous appeler</h5>
+                  <a href="tel:+243977143354">+243 977 143 354</a>
+                  <span class="response-time">Disponible 9h - 18h EST</span>
+                </div>
+              </div>
+
+              <div class="method-card" data-aos="zoom-in" data-aos-delay="350">
+                <div class="card-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="card-content">
+                  <h5>Visiter notre bureau</h5>
+                  <p>kolwezi</p>
+                  <span class="response-time">Ouvert Lundi - Vendredi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="additional-info" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-stats">
+                <div class="stat-item">
+                  <div class="stat-number">24h</div>
+                  <div class="stat-label">Réponse moyenne</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">98%</div>
+                  <div class="stat-label">Satisfaction client</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">150+</div>
+                  <div class="stat-label">Projets livrés</div>
+                </div>
+              </div>
+
+              <div class="social-connect">
+                <h6>Connectez-vous avec nous</h6>
+                <div class="social-links">
+                  <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-discord"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Contact Section -->
+
+  {% endblock %}

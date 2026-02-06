@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- learning pack -->
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="breadcrumbs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active current">Apprendre avec Nous</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="title-wrapper">
+            <h1>Apprendre avec Nous</h1>
+            <p>
+                Explore our Apprendre avec Nous pack, designed to provide students and professionals with the knowledge
+                and skills needed to excel in their careers.
+            </p>
+        </div>
+    </div><!-- End Page Title -->
+    <!-- Learning Pack Section -->
+    <section id="learning-pack" class="learning-pack section">
+
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Apprendre avec Nous</h2>
+                <p>Our Apprendre avec Nous pack offers a variety of educational resources and support to enhance your
+                    learning experience.
+                </p>
+            </div>
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pack-box">
+                        <i class="bi bi-journal-bookmark-fill"></i>
+                        <h3>Comprehensive Study Materials</h3>
+                        <p>Access a wide range of study materials, including textbooks, articles, and multimedia
+                            resources
+                            to support your learning journey.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pack-box">
+                        <i class="bi bi-easel-fill"></i>
+                        <h3>Interactive Workshops</h3>
+                        <p>Participate in interactive workshops led by industry experts to gain practical skills and
+                            insights.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pack-box">
+                        <i class="bi bi-chat-dots-fill"></i>
+                        <h3>Personalized Mentorship</h3>
+                        <p>Receive personalized mentorship and guidance from experienced professionals to help you
+                            achieve
+                            your academic and career goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Learning Pack Section -->
+</main>
+{% endblock content %}

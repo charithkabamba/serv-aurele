@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- become member pack -->
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <div class="breadcrumbs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="bi bi-house"></i> Accueil</a></li>
+                    <li class="breadcrumb-item active current">Become a Member</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="title-wrapper">
+            <h1>Become a Member</h1>
+            <p>
+                Discover our Become a Member pack, designed to provide students with the support and resources
+                they need to become active members of our community.
+            </p>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Become a Member Pack Section -->
+    <section id="become-member-pack" class="become-member-pack section">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Become a Member</h2>
+                <p>Our Become a Member pack offers a variety of services and resources to support your journey into our
+                    community.</p>
+            </div>
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pack-box">
+                        <i class="bi bi-person-plus"></i>
+                        <h3>Membership Registration</h3>
+                        <p>Register for membership and gain access to exclusive resources, events, and opportunities
+                            within our community.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pack-box">
+                        <i class="bi bi-gear-fill"></i>
+                        <h3>Member Benefits</h3>
+                        <p>Explore the benefits of being a member, including discounts, priority access, and special
+                            programs.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pack-box">
+                        <i class="bi bi-calendar-event"></i>
+                        <h3>Events & Activities</h3>
+                        <p>Join us for events and activities designed to enhance your experience and connect you with
+                            fellow members.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- End Become a Member Pack Section -->
+
+</main><!-- End become member pack -->
+{% endblock %}

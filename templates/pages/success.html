@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <div class="page-title">
+        <div class="title-wrapper">
+            <h1>Message Envoyé</h1>
+            <p>
+                Merci pour votre message! Nous vous contacterons sous peu.
+            </p>
+        </div>
+    </div>
+
+    <section class="success section">
+        <div class="container text-center" data-aos="fade-up">
+            <div class="icon-success mb-3">
+                <i class="bi bi-check-circle-fill" style="font-size:64px;color:#2ecc71"></i>
+            </div>
+            <h2>Message reçu avec succès</h2>
+            <p class="lead">Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.</p>
+            <div class="mt-4">
+                <a href="{% url 'index' %}" class="btn btn-outline me-2">Retour à l'accueil</a>
+                <a href="#projects" class="btn btn-primary">Voir les autres projets</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other projects below -->
+    <section id="projects" class="portfolio section">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Autres Projets</h2>
+                <p>Découvrez plus de travail de notre équipe.</p>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <img src="{% static 'assets/img/portfolio/portfolio-9.webp' %}" class="img-fluid"
+                            alt="Branding">
+                        <div class="portfolio-body">
+                            <h4>Identité de marque moderne</h4>
+                            <p>
+                                Création d'une identité de marque complète pour une startup technologique innovante.
+                            </p>
+                            <div class="tech"><span>Illustrator</span> <span>Figma</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <img src="{% static 'assets/img/portfolio/portfolio-10.webp' %}" class="img-fluid"
+                            alt="SaaS Dashboard">
+                        <div class="portfolio-body">
+                            <h4>Tableau de bord SaaS</h4>
+                            <p>Design et développement d'un tableau de bord SaaS pour la gestion des données.</p>
+                            <div class="tech"><span>Figma</span> <span>React</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-card">
+                        <img src="{% static 'assets/img/portfolio/portfolio-11.webp' %}" class="img-fluid"
+                            alt="E-commerce">
+                        <div class="portfolio-body">
+                            <h4>Plateforme E-commerce</h4>
+                            <p>Solution e-commerce complète avec intégration de paiement et API partenaires.</p>
+                            <div class="tech"><span>Shopify</span> <span>React</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}
