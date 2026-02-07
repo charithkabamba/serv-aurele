@@ -15,5 +15,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aurele.settings')
 
 application = get_wsgi_application()
 
-application = application()
+app = application()
 
